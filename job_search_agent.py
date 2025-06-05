@@ -422,7 +422,12 @@ class JobSearchAgent:
         all_jobs = []
         
         # Adzuna
-        adzuna_jobs = self.scraper.search_jobs_adzuna(query, location, count//3)
+     adzuna_jobs = self.scraper.search_jobs_adzuna(query, location)
+if adzuna_jobs:
+    all_jobs.extend(adzuna_jobs)
+else:
+    print("⚠️ No jobs returned from Adzuna or the result was None.")
+
         all_jobs.extend(adzuna_jobs)
         print(f"📊 Found {len(adzuna_jobs)} jobs from Adzuna")
         

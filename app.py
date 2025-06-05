@@ -1,4 +1,7 @@
+# app.py
+
 import streamlit as st
+from job_search_agent import JobSearchAgent, ResumeParserimport streamlit as st
 from job_search_agent import JobSearchAgent, ResumeParser
 
 st.set_page_config(page_title="Job Search AI Agent", layout="wide")
